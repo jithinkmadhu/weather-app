@@ -1,0 +1,53 @@
+.content-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.card {
+  margin: auto;
+  max-width: 60%;
+  min-height: 80%;
+  background-color: #00ab445b;
+  color: black;
+}
+
+.grid-temp {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.5fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+#name-time {
+  grid-column: 1/4;
+}
+#icon-name {
+  grid-column: 1/3;
+}
+
+#weather-img,
+#temperature {
+  grid-row: 2/6;
+}
+
+#temperature {
+  font-size: 60px;
+}
+
+#country-name {
+  font-size: xx-large;
+  margin-bottom: 0%;
+}
+
+#humidity,
+#dew-point,
+#preassure,
+#wdir {
+  border-bottom: 1px solid black;
+}
+
+.weather-icon {
+  width: 200px;
+}

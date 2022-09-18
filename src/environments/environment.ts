@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  weatherApiUrl:
+    'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast',
+  myApiKey: 'U6TKLR454TZXNEALJXLH33SRR',
 };
 
 /*

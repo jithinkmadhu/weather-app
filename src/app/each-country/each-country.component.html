@@ -1,0 +1,104 @@
+<mat-card class="card">
+  <div class="content-wrapper">
+    <div *ngIf="weatherData">
+      <div class="grid-temp">
+        <div class="bgclr" id="name-time">
+          <h1 id="country-name">{{ weatherData.locations[cityName].name }}</h1>
+          <h3>
+            {{
+              weatherData.locations[cityName].currentConditions.datetime.slice(
+                11,
+                19
+              )
+            }}
+          </h3>
+        </div>
+
+        <div class="bgclr" id="weather-img">
+          <img
+            class="weather-icon"
+            src="assets/images/partly-cloudy-night.png"
+            alt=""
+            *ngIf="
+              weatherData.locations[cityName].currentConditions.icon ==
+              'partly-cloudy-night'
+            "
+          />
+          <img
+            class="weather-icon"
+            src="assets/images/partly-cloudy-day.png"
+            alt=""
+            *ngIf="
+              weatherData.locations[cityName].currentConditions.icon ==
+              'partly-cloudy-day'
+            "
+          />
+          <img
+            class="weather-icon"
+            src="assets/images/cloudy.png"
+            alt=""
+            *ngIf="
+              weatherData.locations[cityName].currentConditions.icon == 'cloudy'
+            "
+          />
+          <img
+            class="weather-icon"
+            src="assets/images/clear-night.png"
+            alt=""
+            *ngIf="
+              weatherData.locations[cityName].currentConditions.icon ==
+              'clear-night'
+            "
+          />
+          <img
+            class="weather-icon"
+            src="assets/images/clear-day.png"
+            alt=""
+            *ngIf="
+              weatherData.locations[cityName].currentConditions.icon ==
+              'clear-day'
+            "
+          />
+        </div>
+
+        <div class="bgclr" id="temperature">
+          {{ weatherData.locations[cityName].currentConditions.temp }}
+          &deg; C
+        </div>
+
+        <div class="bgclr" id="humidity">
+          Humidity:
+          {{ weatherData.locations[cityName].currentConditions.humidity }}
+          &percnt;
+        </div>
+
+        <div class="bgclr" id="dew-point">
+          Dew point:
+          {{ weatherData.locations[cityName].currentConditions.dew }} &deg;C
+        </div>
+
+        <div class="bgclr" id="preassure">
+          Pressure:
+          {{
+            weatherData.locations[cityName].currentConditions.sealevelpressure
+          }}
+          mb
+        </div>
+
+        <div class="bgclr" id="wdir">
+          Wind:
+          {{ weatherData.locations[cityName].currentConditions.wdir }} km/h
+        </div>
+
+        <div class="bgclr" id="icon-name">
+          {{ weatherData.locations[cityName].currentConditions.icon }}
+        </div>
+
+        <div class="bgclr" id="more-details">
+          <a routerLink="{{ cityName }}"> more details </a>
+        </div>
+      </div>
+    </div>
+    <button (click)="onClick()">Click</button>
+  </div>
+</mat-card>
