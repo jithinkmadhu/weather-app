@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { WeatherData } from '../models/weather.model';
 
@@ -9,6 +9,15 @@ import { WeatherData } from '../models/weather.model';
 })
 export class WeatherService {
   countryNameFromSearch: any;
+  private subject = new Subject<any>();
+
+  sendClickEvent() {
+    this.subject.next(0);
+  }
+
+  getClickEvent(): Observable<any> {
+    return this.subject.asObservable();
+  }
 
   constructor(private http: HttpClient) {}
 

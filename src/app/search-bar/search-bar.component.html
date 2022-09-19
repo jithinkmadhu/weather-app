@@ -22,7 +22,13 @@
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
-      <button mat-raised-button (click)="getName()">Search</button>
+      <button
+        routerLink="home"
+        mat-raised-button
+        (click)="getName(); clickMe()"
+      >
+        Search
+      </button>
     </form>
   </mat-toolbar>
 </p>

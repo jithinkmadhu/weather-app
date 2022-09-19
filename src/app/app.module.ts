@@ -12,9 +12,10 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { EachCountryComponent } from './each-country/each-country.component';
 import { RouterModule } from '@angular/router';
 import { MoreDetailsComponent } from './more-details/more-details.component';
+import { HomeCountryComponent } from './home-country/home-country.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, EachCountryComponent, MoreDetailsComponent],
+  declarations: [AppComponent, SearchBarComponent, EachCountryComponent, MoreDetailsComponent, HomeCountryComponent],
   imports: [
     RouterModule,
     BrowserModule,
