@@ -23,7 +23,7 @@ export class EachCountryComponent implements OnInit {
   }
 
   weatherData?: WeatherData;
-  cityName?: any = 'India';
+  cityName?: any;
   ngOnInit(): void {
     this.cityName = this.weatherService.putCountryName();
     this.weatherService.getWeatherData(this.cityName).subscribe({
@@ -33,14 +33,4 @@ export class EachCountryComponent implements OnInit {
       },
     });
   }
-
-  // blahBlah(): void {
-  //   this.cityName = this.weatherService.putCountryName();
-  //   this.weatherService.getWeatherData(this.cityName).subscribe({
-  //     next: (response: any) => {
-  //       this.weatherData = response;
-  //       console.log(response);
-  //     },
-  //   });
-  // }
 }

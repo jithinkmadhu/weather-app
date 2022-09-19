@@ -36,12 +36,9 @@ export class WeatherService {
 
   getCountryName(countryName: object): any {
     this.countryNameFromSearch = countryName;
-    this.putCountryName();
   }
 
   putCountryName(): any {
-    console.log(this.countryNameFromSearch.name);
-    this.getWeatherData(this.countryNameFromSearch.name);
     return this.countryNameFromSearch.name;
   }
 }

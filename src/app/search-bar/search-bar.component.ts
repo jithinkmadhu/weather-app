@@ -16,7 +16,7 @@ export interface User {
   styleUrls: ['./search-bar.component.css'],
 })
 export class SearchBarComponent implements OnInit {
-  currentCountry: String = 'India';
+  currentCountry: String | undefined;
   country!: any;
   cu!: string;
   myControl = new FormControl<string | User>('');
